@@ -1,0 +1,22 @@
+version: "2.0"
+
+# Routes that require specific scopes
+routes:
+  - path: "/api/v1/tasks"
+    methods: ["GET"]
+    scopes: ["tasks:read"]
+
+  - path: "/api/v1/tasks"
+    methods: ["POST"]
+    scopes: ["tasks:write"]
+
+  - path: "/api/v1/tasks/*"
+    methods: ["PUT", "DELETE"]
+    scopes: ["tasks:admin"]
+
+# Public routes that do NOT require authentication
+public_routes:
+  - "/"
+  - "/docs"
+  - "/openapi.json"
+  - "/redoc"

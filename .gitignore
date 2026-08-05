@@ -1,17 +1,16 @@
-# Ignore Database Files (Do not overwrite production DB!)
+# Database
 *.db
 enterprise.db
 app.db
 
-# Ignore Python Cache Files
+# Secrets & Private Keys (MUST NOT BE PUSHED)
+.env
+*.pem
+*.key
+secrets/
+
+# Python Cache & Env
 __pycache__/
 *.pyc
-
-# Ignore Environment & Virtual Environments
 venv/
 .venv/
-.env
-
-# Ignore OS Metadata
-.DS_Store
-Thumbs.db
