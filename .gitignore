@@ -1,0 +1,17 @@
+# Ignore Database Files (Do not overwrite production DB!)
+*.db
+enterprise.db
+app.db
+
+# Ignore Python Cache Files
+__pycache__/
+*.pyc
+
+# Ignore Environment & Virtual Environments
+venv/
+.venv/
+.env
+
+# Ignore OS Metadata
+.DS_Store
+Thumbs.db
