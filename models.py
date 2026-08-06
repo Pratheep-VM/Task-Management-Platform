@@ -27,3 +27,12 @@ class Task(Base):
     assigned_to: Mapped[str | None] = mapped_column(String(100), default="Unassigned")
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+class AuditLog(Base):
+    __tablename__ = "audit_logs"
+
+    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    action: Mapped[str] = mapped_column(String(50), nullable=False)
+    details: Mapped[str] = mapped_column(Text, nullable=False)
+    performed_by: Mapped[str] = mapped_column(String(100), default="Admin Engineer")
+    timestamp: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)

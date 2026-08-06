@@ -46,3 +46,9 @@ def get_dashboard_metrics(db: Session):
         "completed": len([t for t in tasks if t.status == models.StatusEnum.COMPLETED]),
         "critical": len([t for t in tasks if t.priority == models.PriorityEnum.CRITICAL])
     }
+
+def get_audit_logs(db: Session, limit: int = 50):
+    if hasattr(models, "AuditLog"):
+        stmt = select(models.AuditLog).order_by(models.AuditLog.id.desc()).limit(limit)
+        return db.scalars(stmt).all()
+    return []

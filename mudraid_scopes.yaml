@@ -1,0 +1,41 @@
+platform_id: "enterprise-task-platform"
+version: 1
+
+routes:
+  # PUBLIC ROUTES (Humans & Web Browser UI)
+  - method: "GET"
+    path: "/"
+    public: true
+
+  - method: "GET"
+    path: "/docs"
+    public: true
+
+  - method: "GET"
+    path: "/openapi.json"
+    public: true
+
+  - method: "GET"
+    path: "/redoc"
+    public: true
+  
+  - method: "POST"
+    path: "/api/v1/tasks"
+    public: true
+
+  # PROTECTED API ROUTES (AI Agents)
+  - method: "GET"
+    path: "/api/v1/tasks"
+    scope: "tasks:read"
+
+  - method: "POST"
+    path: "/api/v1/tasks"
+    scope: "tasks:write"
+
+  - method: "PUT"
+    path: "/api/v1/tasks/*"
+    scope: "tasks:admin"
+
+  - method: "DELETE"
+    path: "/api/v1/tasks/*"
+    scope: "tasks:admin"
