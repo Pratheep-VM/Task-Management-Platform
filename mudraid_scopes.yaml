@@ -2,7 +2,7 @@ platform_id: "enterprise-task-platform"
 version: 1
 
 routes:
-  # PUBLIC ROUTES (Humans & Web Browser UI)
+  # PUBLIC ROUTES 
   - method: "GET"
     path: "/"
     public: true

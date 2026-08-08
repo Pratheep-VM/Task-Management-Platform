@@ -4,9 +4,12 @@ from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from typing import List
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 
 # Import your company's MudraID Middleware
-from mudraid_middleware.middleware import MudraIDMiddleware
+from mudraid_middleware import MudraIDMiddleware
 import models, schemas, crud, database
 
 models.Base.metadata.create_all(bind=database.engine)
