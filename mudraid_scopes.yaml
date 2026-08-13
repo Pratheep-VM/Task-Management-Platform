@@ -19,11 +19,11 @@ routes:
     path: "/redoc"
     public: true
   
-  - method: "POST"
+  - method: "GET"
     path: "/api/v1/tasks"
     public: true
 
-  # PROTECTED API ROUTES (AI Agents)
+  # PROTECTED API ROUTES for AI Agents
   - method: "GET"
     path: "/api/v1/tasks"
     scope: "tasks:read"
@@ -39,3 +39,4 @@ routes:
   - method: "DELETE"
     path: "/api/v1/tasks/*"
     scope: "tasks:admin"
+
