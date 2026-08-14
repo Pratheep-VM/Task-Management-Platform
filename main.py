@@ -9,7 +9,7 @@ load_dotenv()
 
 
 # Import your company's MudraID Middleware
-from mudraid_middleware import MudraIDMiddleware
+from mudraid_platform_middleware import MudraIDMiddleware
 import models, schemas, crud, database
 
 models.Base.metadata.create_all(bind=database.engine)
