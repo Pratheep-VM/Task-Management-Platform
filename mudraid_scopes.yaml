@@ -28,9 +28,9 @@ routes:
     path: "/api/v1/tasks"
     scope: "tasks:read"
 
-  # - method: "POST"
-  #   path: "/api/v1/tasks"
-  #   scope: "tasks:write"
+  - method: "POST"
+    path: "/api/v1/tasks"
+    scope: "tasks:write"
 
   - method: "PUT"
     path: "/api/v1/tasks/*"

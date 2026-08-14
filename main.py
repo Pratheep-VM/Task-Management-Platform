@@ -19,7 +19,8 @@ app = FastAPI(title="Enterprise Task & Resource Platform", version="2.0.0")
 # ======================================================================
 # ATTACH MUDRAID MIDDLEWARE (GLOBAL REQUEST INTERCEPTION)
 # ======================================================================
-app.add_middleware(MudraIDMiddleware)
+app.add_middleware(MudraIDMiddleware,
+                   jwks_url=os.getenv("MUDRAID_JWKS_URL") )
 
 templates = Jinja2Templates(directory="templates")
 
