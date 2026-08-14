@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-# Import your company's MudraID Middleware
+
 from mudraid_platform_middleware import MudraIDMiddleware
 import models, schemas, crud, database
 
