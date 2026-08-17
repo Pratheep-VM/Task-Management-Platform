@@ -19,9 +19,6 @@ routes:
     path: "/redoc"
     public: true
   
-  - method: "GET"
-    path: "/api/v1/tasks"
-    public: true
 
   # PROTECTED API ROUTES for AI Agents
   - method: "GET"
