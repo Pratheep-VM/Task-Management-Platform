@@ -27,7 +27,7 @@ routes:
 
   - method: "POST"
     path: "/api/v1/tasks"
-    scope: "tasks:write"
+    public: true
 
   - method: "PUT"
     path: "/api/v1/tasks/*"
